@@ -1,5 +1,28 @@
 <?php
+function getString(string $key, string $default = ''): string {
+  return trim($_GET[$key] ?? $default);
+}
 
+$page = getString('page');
+$page2 = getString('page2');
+
+
+$articlePages = [
+  'rozhovory' => 'Rozhovory',
+  'vztahy' => 'Vzťahy',
+  'rodina' => 'Rodina',
+  'tabu' => 'Tabu',
+  'cestovanie' => 'Cestovanie',
+  'poradna' => 'Poradňa',
+  'moda' => 'Móda',
+  'recepty' => 'Recepty z našej kuchyne',
+  'moje-zdravie' => 'Moje zdravie'
+];
+
+if (isset($articlePages[$page])) {
+  $CATEGORY_NAME = $articlePages[$page];
+  $PAGE_MODUL = ($page2 !== '') ? 'article' : 'articles';
+}
 ?>
 
 
@@ -55,8 +78,8 @@
   <div class="header-main">
     <div class="container header-main_inner">
       <div class="header-logos">
-        <a href="#" class="logo logo-psychologia">
-          <img src="img/moja-psychologia.svg" alt="Moja psychológia">
+        <a href="/" class="logo logo-psychologia">
+          <img src="/img/moja-psychologia.svg" alt="Moja psychológia">
         </a>
       </div>
 
@@ -72,15 +95,15 @@
   <nav class="main-nav">
     <div class="container">
       <ul>
-        <li><a href="#">Rozhovory</a></li>
-        <li><a href="#">Vzťahy</a></li>
-        <li><a href="#">Rodina</a></li>
-        <li><a href="#">Tabu</a></li>
-        <li><a href="#">Cestovanie</a></li>
-        <li><a href="#">Poradňa</a></li>
-        <li><a href="#">Móda</a></li>
-        <li><a href="#">Recepty z našej kuchyne</a></li>
-        <li><a href="#" class="nav-health">Moje zdravie</a></li>
+        <li><a href="/rozhovory">Rozhovory</a></li>
+        <li><a href="/vztahy">Vzťahy</a></li>
+        <li><a href="/rodina">Rodina</a></li>
+        <li><a href="/tabu">Tabu</a></li>
+        <li><a href="/cestovanie">Cestovanie</a></li>
+        <li><a href="/poradňa">Poradňa</a></li>
+        <li><a href="/moda">Móda</a></li>
+        <li><a href="/recepty">Recepty z našej kuchyne</a></li>
+        <li><a href="/moje-zdravie" class="nav-health">Moje zdravie</a></li>
       </ul>
     </div>
   </nav>
@@ -93,7 +116,18 @@
 
     <div class="content-main">
       <?php
-      include("moduls/title-page.php");
+      if (empty($page)) {
+        include("moduls/title-page.php");
+      } else {
+        if ($PAGE_MODUL === 'articles') {
+          $pageFile = "moduls/articles/articles.php";
+        } elseif ($PAGE_MODUL === 'article') {
+          $pageFile = "moduls/articles/article.php";
+        } else {
+          $pageFile = "moduls/$page.php";
+        }
+        $pageFile = "moduls/$page.php";
+      }
       ?>
     </div>
 
