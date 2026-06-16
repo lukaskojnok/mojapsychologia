@@ -1,8 +1,4 @@
 
-
-<div class="promo-slot promo-970x90">reklama<br>970 × 90</div>
-
-
 <section class="sidebar-current">
   <span class="sidebar-label cat-red">Aktuálne číslo / <strong>jún 2026</strong></span>
 
@@ -15,6 +11,8 @@
     </div>
   </div>
 </section>
+
+<div class="promo-slot promo-300x600">reklama<br>300 × 600</div>
 
 <section class="sidebar-newsletter">
   <span class="sidebar-label cat-orange">Newsletter</span>
@@ -31,4 +29,3 @@
   </form>
 </section>
 
-<div class="promo-slot promo-300x600">reklama<br>300 × 600</div>

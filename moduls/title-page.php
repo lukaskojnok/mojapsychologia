@@ -1,5 +1,3 @@
-<div class="promo-slot promo-970x250">reklama 970 × 250</div>
-
 <section class="hero-news">
   <div class="hero-slider splide" id="hero-slider" aria-label="Hlavné články">
     <div class="splide__track">
