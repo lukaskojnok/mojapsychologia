@@ -6,8 +6,9 @@
     <img src="https://magnetpress.online/wp-content/uploads/2025/09/Moja_psychologia_2505.jpg" alt="Moja psychológia aktuálne číslo">
 
     <div class="sidebar-current_content">
-      <a href="#" class="sidebar-btn sidebar-btn-outline">Ukážka čísla</a>
-      <a href="#" class="sidebar-btn sidebar-btn-red">Predplatiť</a>
+      <a href="/magazin/predplatne" class="sidebar-btn sidebar-btn-red">Predplatiť</a>
+      <a href="/magazin/06-2026" class="sidebar-btn sidebar-btn-outline">Ukážka čísla</a>
+      <a href="/magazin" class="sidebar-btn sidebar-btn-dark">Archív čísel</a>
     </div>
   </div>
 </section>

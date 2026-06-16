@@ -121,10 +121,18 @@ if (isset($articlePages[$page])) {
         $pageFile = "moduls/title-page.php";
       } else {
         if ($page === 'magazin' && $page2 === '') {
-          $pageFile = "moduls/magazine/magazins_tituly.php";
+          $pageFile = "moduls/magazine/magazines_tituly.php";
         } elseif ($page === 'magazin' && $page2 === 'predplatne') {
           $pageFile = "moduls/magazine/predplatne.php";
         } elseif ($page === 'magazin' && $page2 !== '') {
+          $IS_MAGAZINE_ISSUE = true;
+          $MAGAZINE_ISSUE = [
+            'title' => 'Moja psychológia',
+            'number' => str_replace('-', '/', $page2),
+            'date' => 'Vyšlo 12. september 2026',
+            'desc' => 'Aktuálne číslo magazínu prináša rozhovory, vzťahy, psychológiu, rodinu a praktické témy pre každodenný život.',
+            'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-1-2025/moja_psychologia_2501.jpg'
+          ];
           $CATEGORY_NAME = 'Magazín ' . str_replace('-', '/', $page2);
           $pageFile = "moduls/articles/articles.php";
 

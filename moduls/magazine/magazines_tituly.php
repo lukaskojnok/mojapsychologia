@@ -6,34 +6,101 @@
       <p>Vyberte si konkrétne číslo magazínu a pozrite si články z daného vydania.</p>
     </div>
 
-    <a href="/magazine/predplatne" class="magazine-head_btn">Predplatiť magazín</a>
+    <a href="/magazin/predplatne" class="magazine-head_btn">Predplatiť magazín</a>
   </div>
 
   <div class="magazine-grid">
     <?php
-      $magazines = [
-        ['slug' => '09-2026', 'title' => 'Moja psychológia', 'issue' => '09/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=700&q=80'],
-        ['slug' => '08-2026', 'title' => 'Moja psychológia', 'issue' => '08/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=700&q=80'],
-        ['slug' => '07-2026', 'title' => 'Moja psychológia', 'issue' => '07/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=80'],
-        ['slug' => '06-2026', 'title' => 'Moja psychológia', 'issue' => '06/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=700&q=80'],
-        ['slug' => '05-2026', 'title' => 'Moja psychológia', 'issue' => '05/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=700&q=80'],
-        ['slug' => '04-2026', 'title' => 'Moja psychológia', 'issue' => '04/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=700&q=80'],
-        ['slug' => '03-2026', 'title' => 'Moja psychológia', 'issue' => '03/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=700&q=80'],
-        ['slug' => '02-2026', 'title' => 'Moja psychológia', 'issue' => '02/2026', 'year' => 'Ročník 2026', 'img' => 'https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=700&q=80']
-      ];
+$magazines = [
+  [
+    'slug' => '01-2025',
+    'title' => 'Moja psychológia',
+    'issue' => '01/2025',
+    'year' => 'Január 2025',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-1-2025/moja_psychologia_2501.jpg'
+  ],
+  [
+    'slug' => '06-2024',
+    'title' => 'Moja psychológia',
+    'issue' => '06/2024',
+    'year' => 'Jún 2024',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-6-2024/moja_psychologia_2406.jpg'
+  ],
+  [
+    'slug' => '05-2024',
+    'title' => 'Moja psychológia',
+    'issue' => '05/2024',
+    'year' => 'Máj 2024',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-5-2024/moja_psychologia_2405.jpg'
+  ],
+  [
+    'slug' => '04-2024',
+    'title' => 'Moja psychológia',
+    'issue' => '04/2024',
+    'year' => 'Apríl 2024',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-4-2024/moja_psyachologia_2404.jpg'
+  ],
+  [
+    'slug' => '03-2024',
+    'title' => 'Moja psychológia',
+    'issue' => '03/2024',
+    'year' => 'Marec 2024',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-3-2024/moja_psychologia_2403.jpg'
+  ],
+  [
+    'slug' => '02-2024',
+    'title' => 'Moja psychológia',
+    'issue' => '02/2024',
+    'year' => 'Február 2024',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-2-2024/moja_psychologia_2402.jpg'
+  ],
+  [
+    'slug' => '01-2024',
+    'title' => 'Moja psychológia',
+    'issue' => '01/2024',
+    'year' => 'Január 2024',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-1-2024/moja_psychologia_2401.jpg'
+  ],
+  [
+    'slug' => '06-2023',
+    'title' => 'Moja psychológia',
+    'issue' => '06/2023',
+    'year' => 'Jún 2023',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-c-6-2023/moja_psychologia_2306.jpg'
+  ],
+  [
+    'slug' => '05-2023',
+    'title' => 'Moja psychológia',
+    'issue' => '05/2023',
+    'year' => 'Máj 2023',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-2023-5/mp_2305.jpg'
+  ],
+  [
+    'slug' => '04-2023',
+    'title' => 'Moja psychológia',
+    'issue' => '04/2023',
+    'year' => 'Apríl 2023',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-2023-4/moja_psychologia_2304.jpg'
+  ],
+  [
+    'slug' => '03-2023',
+    'title' => 'Moja psychológia',
+    'issue' => '03/2023',
+    'year' => 'Marec 2023',
+    'img' => 'https://www.ciarka.sk/data/magazines/moja-psychologia/moja-psychologia-2023-3/moja_psychologia_2303-1.jpg'
+  ]
+];
 
       foreach ($magazines as $magazine) {
     ?>
-      <a href="/magazine/<?= htmlspecialchars($magazine['slug']) ?>" class="magazine-card">
+      <a href="/magazin/<?= htmlspecialchars($magazine['slug']) ?>" class="magazine-card">
         <div class="magazine-card_img">
           <img src="<?= htmlspecialchars($magazine['img']) ?>" alt="<?= htmlspecialchars($magazine['title'] . ' ' . $magazine['issue']) ?>">
-          <span><?= htmlspecialchars($magazine['issue']) ?></span>
         </div>
 
         <div class="magazine-card_text">
-          <small><?= htmlspecialchars($magazine['year']) ?></small>
-          <h2><?= htmlspecialchars($magazine['title']) ?></h2>
-          <p>Číslo <?= htmlspecialchars($magazine['issue']) ?></p>
+          <h2><?= htmlspecialchars($magazine['issue']) ?></h2>
+          <p><?= htmlspecialchars($magazine['year']) ?></p>
         </div>
       </a>
     <?php } ?>

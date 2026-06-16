@@ -127,7 +127,7 @@
     <h2>Úzkosť</h2>
     <p>Ako ju spoznať, pochopiť a zvládnuť v každom dni.</p>
     <span class="block-more cat-red">Všetky témy →</span>
-    <img src="img/uzkost_png.png" alt="">
+    <img src="/img/uzkost_png.png" alt="">
   </a>
 
   <div class="toparticles-card block-bg-blue">

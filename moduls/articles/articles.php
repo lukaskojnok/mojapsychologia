@@ -1,10 +1,28 @@
-<section class="articles-page">
-  <div class="articles-head">
-    <div>
-      <h1 class="articles-title"><?= htmlspecialchars($CATEGORY_NAME ?? 'Články') ?></h1>
+<?php if (!empty($IS_MAGAZINE_ISSUE) && !empty($MAGAZINE_ISSUE)) { ?>
+  <div class="magazine-issue-head">
+    <div class="magazine-issue-cover">
+      <img src="<?= htmlspecialchars($MAGAZINE_ISSUE['img']) ?>" alt="<?= htmlspecialchars($MAGAZINE_ISSUE['title']) ?>">
+    </div>
+
+    <div class="magazine-issue-text">
+      <span>Číslo <?= htmlspecialchars($MAGAZINE_ISSUE['number']) ?></span>
+      <h1><?= htmlspecialchars($MAGAZINE_ISSUE['title']) ?></h1>
+      <small><?= htmlspecialchars($MAGAZINE_ISSUE['date']) ?></small>
+      <p><?= htmlspecialchars($MAGAZINE_ISSUE['desc']) ?></p>
+      <a href="/magazin/predplatne">Predplatiť magazín</a>
     </div>
   </div>
+<?php } ?>
 
+
+<section class="articles-page">
+  <?php if (empty($IS_MAGAZINE_ISSUE)) { ?>
+    <div class="articles-head">
+      <div>
+        <h1 class="articles-title"><?= htmlspecialchars($CATEGORY_NAME ?? 'Články') ?></h1>
+      </div>
+    </div>
+  <?php } ?>
 
   <div class="articles-toolbar">
     <div class="articles-tabs">
