@@ -45,11 +45,12 @@ if (isset($articlePages[$page])) {
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <script src="js/meniny-sk.js"></script>
-  <script src="js/header.js"></script>
+  <script src="/js/meniny-sk.js"></script>
+  <script src="/js/header.js"></script>
 
-  <link rel="stylesheet" href="css/css.css?<?= time() ?>">
-  <link rel="stylesheet" href="css/responsive.css?<?= time() ?>">
+  <link rel="stylesheet" href="/css/css.css?<?= time() ?>">
+  <link rel="stylesheet" href="/css/articles.css?<?= time() ?>">
+  <link rel="stylesheet" href="/css/responsive.css?<?= time() ?>">
 </head>
 <body>
 
@@ -100,7 +101,7 @@ if (isset($articlePages[$page])) {
         <li><a href="/rodina">Rodina</a></li>
         <li><a href="/tabu">Tabu</a></li>
         <li><a href="/cestovanie">Cestovanie</a></li>
-        <li><a href="/poradňa">Poradňa</a></li>
+        <li><a href="/poradna">Poradňa</a></li>
         <li><a href="/moda">Móda</a></li>
         <li><a href="/recepty">Recepty z našej kuchyne</a></li>
         <li><a href="/moje-zdravie" class="nav-health">Moje zdravie</a></li>
@@ -108,7 +109,6 @@ if (isset($articlePages[$page])) {
     </div>
   </nav>
 </header>
-
 
 
 <main class="site-main">
@@ -123,10 +123,8 @@ if (isset($articlePages[$page])) {
           $pageFile = "moduls/articles/articles.php";
         } elseif ($PAGE_MODUL === 'article') {
           $pageFile = "moduls/articles/article.php";
-        } else {
-          $pageFile = "moduls/$page.php";
         }
-        $pageFile = "moduls/$page.php";
+        include($pageFile);
       }
       ?>
     </div>
@@ -149,7 +147,7 @@ if (isset($articlePages[$page])) {
   <section class="quick-links">
     <a href="#" class="quick-link">
       <div class="quick-link_icon">
-        <img src="img/icon-testy-kvizy.svg" alt="">
+        <img src="/img/icon-testy-kvizy.svg" alt="">
       </div>
 
       <div class="quick-link_content">
@@ -160,7 +158,7 @@ if (isset($articlePages[$page])) {
 
     <a href="#" class="quick-link">
       <div class="quick-link_icon">
-        <img src="img/icon-ankety.svg" alt="">
+        <img src="/img/icon-ankety.svg" alt="">
       </div>
 
       <div class="quick-link_content">
@@ -171,7 +169,7 @@ if (isset($articlePages[$page])) {
 
     <a href="#" class="quick-link">
       <div class="quick-link_icon">
-        <img src="img/icon-psycholog-radi.svg" alt="">
+        <img src="/img/icon-psycholog-radi.svg" alt="">
       </div>
 
       <div class="quick-link_content">
@@ -182,7 +180,7 @@ if (isset($articlePages[$page])) {
 
     <a href="#" class="quick-link">
       <div class="quick-link_icon">
-        <img src="img/icon-lekar-radi.svg" alt="">
+        <img src="/img/icon-lekar-radi.svg" alt="">
       </div>
 
       <div class="quick-link_content">
@@ -193,7 +191,7 @@ if (isset($articlePages[$page])) {
 
     <a href="#" class="quick-link">
       <div class="quick-link_icon">
-        <img src="img/icon-moje-zdravie.svg" alt="">
+        <img src="/img/icon-moje-zdravie.svg" alt="">
       </div>
 
       <div class="quick-link_content">
@@ -204,6 +202,92 @@ if (isset($articlePages[$page])) {
   </section>
 
 </div><!-- container -->  
+
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer_top">
+
+      <div class="site-footer_brand">
+        <a href="/" class="site-footer_logo">
+          <img src="/img/moja-psychologia.svg" alt="Moja psychológia">
+        </a>
+
+        <p>
+          Magazín o vzťahoch, psychike, rodine, osobnom rozvoji a každodennom živote.
+        </p>
+
+        <div class="site-footer_socials">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer_col">
+        <h3>Rubriky</h3>
+
+        <ul>
+          <li><a href="/rozhovory">Rozhovory</a></li>
+          <li><a href="/vztahy">Vzťahy</a></li>
+          <li><a href="/rodina">Rodina</a></li>
+          <li><a href="/tabu">Tabu</a></li>
+          <li><a href="/cestovanie">Cestovanie</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer_col">
+        <h3>Ďalšie</h3>
+
+        <ul>
+          <li><a href="/poradna">Poradňa</a></li>
+          <li><a href="/moda">Móda</a></li>
+          <li><a href="/recepty">Recepty z našej kuchyne</a></li>
+          <li><a href="/moje-zdravie">Moje zdravie</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer_col site-footer_contact">
+        <h3>Kontakt</h3>
+
+        <ul>
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:redakcia@mojapsychologia.sk">redakcia@mojapsychologia.sk</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+421948123456">+421 948 123 456</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Slovensko</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer_bottom">
+      <p>© <?= date('Y') ?> Moja psychológia. Všetky práva vyhradené.</p>
+
+      <div>
+        <a href="/reklama">Reklama</a>
+        <a href="/ochrana-osobnych-udajov">Ochrana osobných údajov</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 
 </body>
