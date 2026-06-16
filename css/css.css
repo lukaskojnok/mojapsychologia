@@ -127,7 +127,10 @@ h6 {
   color: var(--color-black);
 }
 .topbar_right > a:first-child {
-  color: var(--color-yellow-dark); font-weight: 600;
+  color: var(--color-gray); font-weight: 600;
+}
+.topbar_right > a:first-child:hover {
+  text-decoration: none;
 }
 .topbar_right > a:nth-child(2) {
   font-weight: 600;

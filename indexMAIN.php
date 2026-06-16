@@ -49,6 +49,7 @@ if (isset($articlePages[$page])) {
   <script src="/js/header.js"></script>
 
   <link rel="stylesheet" href="/css/css.css?<?= time() ?>">
+  <link rel="stylesheet" href="/css/magazine.css?<?= time() ?>">
   <link rel="stylesheet" href="/css/articles.css?<?= time() ?>">
   <link rel="stylesheet" href="/css/responsive.css?<?= time() ?>">
 </head>
@@ -62,8 +63,8 @@ if (isset($articlePages[$page])) {
         <span id="today-name-day"></span>
       </div>
       <div class="topbar_right">
-        <button type="button" class="btn btn-yellow">Predplatné časopisu</button>
-        <a href="#">Aktuálne číslo</a>
+        <a href="/magazin/predplatne" class="btn btn-yellow">Predplatné časopisu</a>
+        <a href="/magazin/06-2026">Aktuálne číslo</a>
 
         <a href="#" class="social" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
@@ -117,15 +118,26 @@ if (isset($articlePages[$page])) {
     <div class="content-main">
       <?php
       if (empty($page)) {
-        include("moduls/title-page.php");
+        $pageFile = "moduls/title-page.php";
       } else {
-        if ($PAGE_MODUL === 'articles') {
+        if ($page === 'magazin' && $page2 === '') {
+          $pageFile = "moduls/magazine/magazins_tituly.php";
+        } elseif ($page === 'magazin' && $page2 === 'predplatne') {
+          $pageFile = "moduls/magazine/predplatne.php";
+        } elseif ($page === 'magazin' && $page2 !== '') {
+          $CATEGORY_NAME = 'Magazín ' . str_replace('-', '/', $page2);
+          $pageFile = "moduls/articles/articles.php";
+
+        } elseif ($PAGE_MODUL === 'articles') {
           $pageFile = "moduls/articles/articles.php";
         } elseif ($PAGE_MODUL === 'article') {
           $pageFile = "moduls/articles/article.php";
+        } else {
+          $pageFile = "moduls/title-page.php";
         }
-        include($pageFile);
       }
+
+      include($pageFile);
       ?>
     </div>
 
