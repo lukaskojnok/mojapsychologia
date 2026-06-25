@@ -13,8 +13,6 @@
   </div>
 </section>
 
-<div class="promo-slot promo-300x600">reklama<br>300 × 600</div>
-
 <section class="sidebar-newsletter">
   <span class="sidebar-label cat-orange">Newsletter</span>
   <h2>Raz týždenne dávka psychologickej opory, zdravých rád a článkov, ku ktorým sa oplatí vrátiť.</h2>

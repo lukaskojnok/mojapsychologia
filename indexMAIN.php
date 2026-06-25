@@ -226,6 +226,66 @@ if (isset($articlePages[$page])) {
 
 
 
+<section class="instagram-strip">
+
+    <div class="instagram-strip_head">
+      <h2>Sledujte nás na Instagrame</h2>
+      <a href="https://www.instagram.com/" target="_blank">Sledovať na Instagrame →</a>
+    </div>
+    <div class="instagram-strip_grid">
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=500&auto=format&fit=crop" alt="Instagram"></a>
+    </div>
+
+</section>
+
+
+
+
+
+  <section class="magazine-network">
+      <div class="magazine-network_logos">
+
+        <a href="/atm" class="magazine-network_item">
+          <img src="https://www.ciarka.sk/img/logos/atm.svg" alt="ATM">
+        </a>
+
+        <a href="/letectvi-kosmonautika" class="magazine-network_item">
+          <img src="https://www.ciarka.sk/img/logos/letectvi-kosmonautika.svg" alt="Letectví + kosmonautika">
+        </a>
+
+        <a href="/modelar" class="magazine-network_item">
+          <img src="https://www.ciarka.sk/img/logos/modelar.svg" alt="Modelář">
+        </a>
+
+        <a href="/aerohobby" class="magazine-network_item">
+          <img src="https://www.ciarka.sk/img/logos/aerohobby.svg" alt="AeroHobby">
+        </a>
+
+        <a href="/sikovnicek" class="magazine-network_item">
+          <img src="https://www.ciarka.sk/img/logos/sikovnicek.png" alt="Šikovníček">
+        </a>
+
+        <a href="/food" class="magazine-network_item">
+          <img src="https://www.ciarka.sk/img/logos/food.svg" alt="F.O.O.D.">
+        </a>
+
+        <a href="/slovensky-rybar" class="magazine-network_item">
+          <img src="https://www.ciarka.sk/img/logos/slovensky-rybar.png" alt="Slovenský rybár">
+        </a>
+
+      </div>
+  </section>
+
+
+
+
 <footer class="site-footer">
   <div class="container">
     <div class="site-footer_top">
@@ -307,7 +367,6 @@ if (isset($articlePages[$page])) {
     </div>
   </div>
 </footer>
-
 
 
 </body>
